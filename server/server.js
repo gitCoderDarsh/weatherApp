@@ -9,25 +9,24 @@ const port = 3000;
 
 const apiKey = process.env.API_KEY;
 
-function helloworld(req, res){
-  res.send("hello world.");
-}
+app.use(express.static('../client/public'));
 
-app.use(express.static('public'));
+app.use(express.json());
 
 async function data(req, res){
-  const city = req.query.city || 'Mumbai';
+  console.log(req.body);
+  const city = req.body.city;
   try{
     const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`);
     res.json(response.data);
   } catch(error){
     res.status(500).send('error fetching weather data');
-    console.log(error)
+    console.log(error);
   } 
 }
 
-app.get('/weather', data);
-app.get('/', helloworld);
+app.post('/weather', data);
+app.get('/');
 
 app.listen(port, () => {
   console.log(`server is running on port ${port}`);
