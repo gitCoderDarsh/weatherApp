@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    background-image: url('./search-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    backdrop-filter: blur(4px);
+}
+
+.head{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: #ff827795;
+    font-size: 25px;
+    font-family: Quicksand;
+    font-weight: 600;
+    color: beige;
+}
+
+.container{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.708);
+    z-index: -1;
+}
+
+.search-body {
+    margin: auto;
+    margin-top: 20vh;
+    background-color: #a92422;
+    height: 250px;
+    width: 500px;
+    border-radius: 10px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.search{
+    margin: 50px auto 0 auto;
+}
+
+.search input {
+    font-family: Quicksand;
+    font-size: 36px;
+    width: 400px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    font-style: italic;
+}
+
+.search-button {
+    margin: auto;
+}
+
+.search-button button {
+    background-color: rgb(255, 255, 255);
+    font-family: Quicksand;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    padding: 10px 50px;
+    border-radius: 20px;
+    transition: background-color 0.2s;
+}
+
+.search-button button:hover {
+    background-color: #28A745;
+    color: white;
+}

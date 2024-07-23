@@ -13,8 +13,10 @@ function helloworld(req, res){
   res.send("hello world.");
 }
 
+app.use(express.static('public'));
+
 async function data(req, res){
-  const city = req.query.city || 'London';
+  const city = req.query.city || 'Mumbai';
   try{
     const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`);
     res.json(response.data);
