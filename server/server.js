@@ -9,8 +9,9 @@ const port = 3000;
 
 const apiKey = process.env.API_KEY;
 
-app.use(express.static('../client/public'));
+// middlewares
 
+app.use(express.static('../client/public'));
 app.use(express.json());
 
 async function data(req, res){

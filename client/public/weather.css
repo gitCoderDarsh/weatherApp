@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Playfair Display:wght@300..700&display=swap'); */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap'); */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
 body {
     padding: 0;
@@ -19,11 +25,11 @@ body {
     left: 0;
     right: 0;
     text-align: center;
-    background-color: #ff827795;
-    font-size: 25px;
-    font-family: Quicksand;
+    background-color: #ffdd0080;
+    font-size: 30px;
+    font-family: Playfair Display;
     font-weight: 600;
-    color: beige;
+    color: #000000;
 }
 
 .container{
@@ -37,9 +43,10 @@ body {
 }
 
 .search-body {
+    /* display: none; */
     margin: auto;
     margin-top: 20vh;
-    background-color: #a92422;
+    background-color: #ffdd00cc;
     height: 250px;
     width: 500px;
     border-radius: 10px;
@@ -57,14 +64,18 @@ body {
 }
 
 .search input {
-    font-family: Quicksand;
+    font-family: Playfair Display;
     font-size: 36px;
     width: 400px;
     border: none;
     border-radius: 5px;
     padding: 10px;
     text-align: center;
-    font-style: italic;
+    /* font-style: italic; */
+}
+
+.search input::placeholder{
+    color: black;
 }
 
 .search-button {
@@ -73,7 +84,7 @@ body {
 
 .search-button button {
     background-color: rgb(255, 255, 255);
-    font-family: Quicksand;
+    font-family: Playfair Display;
     font-size: 16px;
     font-weight: 700;
     border: none;
@@ -84,5 +95,88 @@ body {
 
 .search-button button:hover {
     background-color: #28A745;
-    color: white;
+    color: black;
+}
+
+.weather-info{
+    margin: auto;
+    margin-top: 20vh;
+    background-color: #ffdd00cc;
+    height: 250px;
+    width: 500px;
+    border-radius: 10px;
+    display: flex;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.top{
+    display: flex;
+    background-color: rgba(245, 245, 220, 0.2);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 20px 30px;
+    font-family: Playfair Display;
+    /* font-style: italic; */
+    font-size: 32px;
+    font-weight: 700;
+    color: black;
+    justify-content: space-between;
+}
+
+.home {
+    border: none;
+    border-radius: 10px;
+    font-family: Playfair Display;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+.home:hover{
+    background-color: #28A745;
+    color: white
+}
+
+.bottom{
+    display: flex;
+    color: black;
+    font-family: Playfair Display;
+    align-items: flex-end;
+}
+
+.bottom-left{
+    flex: 3;
+    padding-left: 30px;
+    padding-bottom: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.temp{
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.feels-like{
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.line {
+    width: 200px;
+    border: 1px solid;
+    margin-left: 0;
+}
+
+.weather-type{
+    font-size: 18px;
+}
+
+.bottom-right{
+    flex: 2;
+    text-align: end;
+    font-size: 18px;
+    font-weight: 500;   
+    padding-bottom: 20px;
+    padding-right: 20px;
 }
