@@ -1,3 +1,5 @@
+// importing libraries
+
 import express from 'express';
 import axios from 'axios';
 import dotenv from 'dotenv';
@@ -10,7 +12,7 @@ const port = 3000;
 const apiKey = process.env.API_KEY;
 
 // middlewares
-
+//this helps to display the static page, basically the frontend where client will interact with the website
 app.use(express.static('../client/public'));
 app.use(express.json());
 
